@@ -12,7 +12,7 @@ var webpack = require('webpack'),
 module.exports = {
     context: __dirname,
     entry: {
-        vendor: ["angular", "lodash", "ui-router"]
+        vendor: ["angular", "reflect-metadata","es6-shim","zone.js", "rxjs", "angular2", "lodash", "ui-router"]
     },
     plugins: plugins,
     output: {

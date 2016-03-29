@@ -23,7 +23,7 @@ var webpack = require('webpack'),
       server: {baseDir: [__dirname + settings.distFolder]}
     }, {
       use: spa({
-        selector: '[ng-app]'
+        selector: '[html]'
       })
     }),
     new ExtractTextPlugin(settings.stylesheetPath),
@@ -68,6 +68,7 @@ module.exports = {
   },
   plugins: plugins,
   externals: {
-    'angular': 'angular'
+    'angular': 'angular',
+    'angular2': 'angular2'
   }
 };

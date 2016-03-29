@@ -18,7 +18,11 @@
 ///<reference path="../tsd.d.ts"/>
 import views from './views/loader';
 import controllers from './controllers/loader';
+import {upgradeAdapter} from '../components/upgradeAdapter'
 
 const app = angular.module('demoApp', ['miQStaticAssets', 'ui.bootstrap', 'ui.router', 'ui.bootstrap.tabs']);
+
+upgradeAdapter.bootstrap(document.body, ['demoApp'], {strictDi: true});
+
 controllers(app);
 views(app);

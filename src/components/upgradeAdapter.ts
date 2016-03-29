@@ -1,3 +1,4 @@
+
 ///
 /// Copyright 2015-2016 Red Hat, Inc. and/or its affiliates
 /// and other contributors as indicated by the @author tags.
@@ -15,11 +16,9 @@
 /// limitations under the License.
 ///
 
-///<reference path="tsd.d.ts"/>
-import components from './components/loader';
-import services from './services/loader';
 
-const app = angular.module('miQStaticAssets', ['ui.bootstrap', 'ui.bootstrap.tabs']);
+///<reference path="../tsd.d.ts"/>
 
-components(app);
-services(app);
+
+import {UpgradeAdapter} from 'angular2/upgrade';
+export const upgradeAdapter = new UpgradeAdapter();
